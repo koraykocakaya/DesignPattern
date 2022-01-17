@@ -1,4 +1,4 @@
-package com.kk.designPattern.creational.prototype;
+package com.kk.designPattern.model;
 
 public class Circle extends Shape {
 

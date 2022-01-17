@@ -3,6 +3,10 @@ package com.kk.designPattern.creational.prototype;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kk.designPattern.model.Circle;
+import com.kk.designPattern.model.Rectangle;
+import com.kk.designPattern.model.Shape;
+
 public class Application {
 	public static void main(String[] args) {
 		
@@ -14,8 +18,8 @@ public class Application {
 		
 		Rectangle r1 = new Rectangle();
 		r1.fieldX = 33;
-		r1.height = 10;
-		r1.width = 44;
+		r1.setHeight(10);
+		r1.setWidth(44);
 		shapeList.add(r1);
 		
 		List<Shape> cloneList = cloneList(shapeList);
