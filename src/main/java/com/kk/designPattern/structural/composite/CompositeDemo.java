@@ -15,7 +15,6 @@ public class CompositeDemo {
 
 		public int value;
 
-		// please leave this constructor as-is
 		public SingleValue(int value) {
 			this.value = value;
 		}
@@ -41,22 +40,22 @@ public class CompositeDemo {
 		 */
 		private static final long serialVersionUID = 1L;
 		int mySum = 0;
-		// please leave this constructor as-is
+		
 		public MyList(Collection<? extends ValueContainer> c) {
 			super(c);
 		}
 
 		public int getSum(ValueContainer vc) {
 			int sum = 0;
-			for (Integer integer : vc) {
-				sum += integer;
+			for (Integer value : vc) {
+				sum += value;
 			}
 			return sum;
 		}
 		
 		public int sum()
 	    {
-			forEach(a -> mySum += getSum(a));
+			forEach(itr -> mySum += getSum(itr));
 			return mySum;
 	    }
 	}
@@ -71,7 +70,6 @@ public class CompositeDemo {
 		mv.add(50);
 		mv.add(60);
 		
-		// sum 156
 		MyList myList = new MyList(Arrays.asList(mv, sv1, sv2,sv3));
 		System.out.println(myList.sum());
 	}

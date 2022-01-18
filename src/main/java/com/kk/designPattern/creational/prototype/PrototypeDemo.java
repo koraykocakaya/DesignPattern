@@ -7,7 +7,7 @@ import com.kk.designPattern.model.Circle;
 import com.kk.designPattern.model.Rectangle;
 import com.kk.designPattern.model.Shape;
 
-public class Application {
+public class PrototypeDemo {
 	public static void main(String[] args) {
 		
 		List<Shape> shapeList = new ArrayList<>();

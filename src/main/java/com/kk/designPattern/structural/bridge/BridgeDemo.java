@@ -8,13 +8,8 @@ public class BridgeDemo {
 	}
 	
 	public void testBridgePattern() {
-		Renderer vectorRenderer = new VectorRenderer();
-		Shape triangle = new Triangle(vectorRenderer);
-		System.out.println(triangle.toString());
-		
-		Renderer rasterRenderer = new RasterRenderer();
-		Shape square = new Square(rasterRenderer);
-		System.out.println(square.toString());
+		System.out.println(new Triangle(new VectorRenderer()).toString());
+		System.out.println(new Square(new RasterRenderer()).toString());
 	}
 	
 	abstract class Shape {
@@ -79,7 +74,5 @@ public class BridgeDemo {
 		public String whatToRenderAs() {
 			return "pixels";
 		}
-		
 	}
-	
 }

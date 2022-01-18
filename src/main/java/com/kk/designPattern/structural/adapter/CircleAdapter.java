@@ -9,7 +9,6 @@ public class CircleAdapter extends Rectangle{
 	
 	public CircleAdapter(Circle circle) {
 		this.circle = circle;
-
 	}
 	
 	@Override
