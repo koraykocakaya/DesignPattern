@@ -28,9 +28,18 @@ public class CompositeDemo {
 
 	class ManyValues extends ArrayList<Integer> implements ValueContainer {
 
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
 	}
 
 	class MyList extends ArrayList<ValueContainer> {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
 		int mySum = 0;
 		// please leave this constructor as-is
 		public MyList(Collection<? extends ValueContainer> c) {
