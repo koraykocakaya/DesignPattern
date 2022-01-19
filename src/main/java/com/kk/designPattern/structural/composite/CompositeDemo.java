@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.stream.StreamSupport;
 
 public class CompositeDemo {
 
@@ -55,8 +56,13 @@ public class CompositeDemo {
 		
 		public int sum()
 	    {
-			forEach(itr -> mySum += getSum(itr));
-			return mySum;
+			return stream()
+					.flatMap(vc -> StreamSupport.stream(vc.spliterator(), false))
+					.mapToInt(val -> val)
+					.sum();
+			
+//			forEach(itr -> mySum += getSum(itr));
+//			return mySum;
 	    }
 	}
 	
