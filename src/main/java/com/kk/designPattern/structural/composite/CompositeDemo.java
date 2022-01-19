@@ -58,6 +58,7 @@ public class CompositeDemo {
 	    {
 			return stream()
 					.flatMap(vc -> StreamSupport.stream(vc.spliterator(), false))
+					// sum icin IntStreame cevirmemiz gerekti
 					.mapToInt(val -> val)
 					.sum();
 			
