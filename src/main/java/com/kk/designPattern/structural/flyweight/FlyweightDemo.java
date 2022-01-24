@@ -19,6 +19,8 @@ public class FlyweightDemo {
 
 class Sentence {
 	private String plainText;
+	
+	// boylece her token map gonderdiginde yenisini yaratmak zorunda kalmicaz
 	private Map<Integer, WordToken> wordTokenMap = new HashMap<>();
 
 	public Sentence(String plainText) {
@@ -26,6 +28,9 @@ class Sentence {
 	}
 
 	public WordToken getWord(int index) {
+		if(wordTokenMap.containsKey(index)) {
+			return wordTokenMap.get(index);
+		}
 		WordToken token = new WordToken();
 		wordTokenMap.put(index, token);
 		return token;
