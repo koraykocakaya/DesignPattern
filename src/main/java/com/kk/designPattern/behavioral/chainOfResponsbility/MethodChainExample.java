@@ -8,6 +8,7 @@ public class MethodChainExample {
 		CreatureModifier root = new CreatureModifier(creature1);
 		root.add(new DoubleAttackModifier(creature1));
 		root.add(new NoBonusModifier(creature1));
+		// defense after nobonus wont be executed
 		root.add(new DefenseModifier(creature1));
 		root.handle();
 		
