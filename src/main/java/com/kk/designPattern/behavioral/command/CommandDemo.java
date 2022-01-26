@@ -20,7 +20,8 @@ public class CommandDemo {
 			System.out.println(bankAccount.toString());
 		}
 		
-		// undo should control that call method works
+		// undo should control that call method works 
+		
 		for (int i=bankAccountCommandList.size() -1 ; i>=0; i--) {
 			bankAccountCommandList.get(i).undo();
 			System.out.println(bankAccount.toString());
