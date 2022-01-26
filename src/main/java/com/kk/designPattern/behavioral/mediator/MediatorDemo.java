@@ -5,6 +5,7 @@ import java.util.List;
 
 public class MediatorDemo {
 	public static void main(String[] args) {
+		
 		Mediator mediator = new Mediator();
 		Participant p1 = new Participant(mediator);
 		Participant p2 = new Participant(mediator);
